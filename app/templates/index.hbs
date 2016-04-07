@@ -1,6 +1,8 @@
 
 {{#each model as |project|}}
+{{#link-to 'project' project.id}}<div class="indexTile">
   {{project-tile project=project}}
+</div>{{/link-to}}
 {{/each}}
 
 
