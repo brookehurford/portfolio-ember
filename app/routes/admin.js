@@ -9,6 +9,15 @@ export default Ember.Route.extend({
       var newProject = this.store.createRecord('project', params);
       newProject.save();
       this.transitionTo('admin');
+    },
+    updateProject(project, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          project.set(key,params[key]);
+        }
+      });
+      project.save();
+      this.transitionTo('admin');
     }
   }
 });

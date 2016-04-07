@@ -2,6 +2,7 @@
 
 {{#each model as |project|}}
   {{project-tile project=project}}
+  {{update-project project=project updateProject="updateProject"}}
 {{/each}}
 
 <hr>

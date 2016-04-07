@@ -1,6 +1,10 @@
-<div class="container">
-  <h2>Portfolio</h2>
-  {{#link-to 'admin'}}are you an admin?{{/link-to}}
+<div class="headerBar">
+  <div class="container">
+    {{#link-to 'index'}}<h2>Portfolio</h2>{{/link-to}}
+    {{#link-to 'admin'}}Admin{{/link-to}}
+  </div>
   <hr>
+</div>
+<div class="container">
   {{outlet}}
 </div>
