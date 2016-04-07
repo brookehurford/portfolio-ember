@@ -1,0 +1,10 @@
+<h1>Admin Page</h1>
+
+{{#each model as |project|}}
+  {{project.title}}
+{{/each}}
+
+<hr>
+{{new-project project=model saveProject="saveProject"}}
+
+{{log model}}

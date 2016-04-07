@@ -1,0 +1,24 @@
+{{#if addNewProject}}
+  <form>
+    <div class="form-group">
+      <label for="title">Title: </label>
+      {{input value=title}}
+    </div>
+    <div class="form-group">
+      <label for="details">Details: </label>
+      {{input value=details}}
+    </div>
+    <div class="form-group">
+      <label for="technologies">Technologies Used: </label>
+      {{input value=technologies}}
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL: </label>
+      {{input value=image}}
+    </div>
+    <button {{action 'saveProject'}}>Save Project</button>
+  </form>
+  <button {{action 'toggleDetail'}}>Cancel</button>
+{{else}}
+  <button {{action 'toggleDetail'}}>Add New Project</button>
+{{/if}}
