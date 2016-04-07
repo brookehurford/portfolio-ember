@@ -18,6 +18,12 @@ export default Ember.Route.extend({
       });
       project.save();
       this.transitionTo('admin');
+    },
+    delete(project) {
+      if(confirm('Are you sure you want to delete this project?')) {
+        project.destroyRecord();
+        this.transitionTo('admin');
+      }
     }
   }
 });

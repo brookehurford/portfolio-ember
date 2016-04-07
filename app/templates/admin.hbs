@@ -1,8 +1,13 @@
 <h1>Admin Page</h1>
 
 {{#each model as |project|}}
+<div class="adminTile">
   {{project-tile project=project}}
-  {{update-project project=project updateProject="updateProject"}}
+  <div class="adminButtons">
+    {{update-project project=project updateProject="updateProject"}}
+    <button class="shortBtn"{{action 'delete' project}}>Delete Project</button>
+  </div>
+</div>
 {{/each}}
 
 <hr>
