@@ -1,6 +1,45 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+// All header styling for the site
+
+.mainHeader {
+  @include flex();
+  flex-wrap: wrap;
+  height: 100vh;
+  .topLeft {
+    @include size(50% 50%);
+    background-image: url(("/img/brooke-left.png"));
+    background-size: cover;
+  }
+  .topRight {
+    @include grid($primary);
+    @include flex($direction: column, $justify: center, $align-items: center);
+    h1 {
+      @include text($weight: lighter, $color: $black);
+      padding: 0;
+      margin: 0;
+      &:first-child{
+        font-size: 60px;
+      }
+      &:nth-child(2){
+        @include text($letter-spacing: 2px);
+        text-transform: uppercase;
+      }
+    }
+  }
+  .bottomLeft {
+    @include grid($secondary);
+    @include flex($justify: center, $align-items: center);
+    h1 {
+      @include text($color: $black);
+    }
+  }
+  .bottomRight {
+    @include grid($black);
+    @include flex($justify: center, $align-items: center);
+    h1 {
+      @include text($color: $white);
+    }
+  }
+}
 
 .headerBar {
   padding: 1% 0;
@@ -12,20 +51,22 @@
   }
 }
 
-// =========  Full screen video code, doesn't autoplay =========
-// .fullscreen-bg {
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   overflow: hidden;
-//   z-index: -100;
-// }
-//
-// .fullscreen-bg__video {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
+// .homeHeader {
+//   @include flex($justify: center, $align-items: center);
 //   height: 100vh;
+//   background-image: linear-gradient(rgba(black, 0.5), rgba(black,0.5)), url(("/img/brooke-left.png"));
+//   background-size: cover;
+//   color: $primary;
+//   #logo {
+//     position: absolute;
+//     top: 5%;
+//     right: 5%;
+//   }
+//   .headerContent {
+//     h1 {
+//       @extend %centeredText;
+//       @extend %headerFont;
+//       @include text($weight: lighter, $l-height: 30px, $letter-spacing: 2px);
+//     }
+//   }
 // }

@@ -26,6 +26,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+  @extend %headerFont;
+  @include text($weight: lighter);
+}
+
 .container {
   width: 90%;
   max-width: 1100px;

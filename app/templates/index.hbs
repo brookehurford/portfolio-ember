@@ -1,16 +1,28 @@
+<div class="mainHeader">
+  <div class="topLeft"></div>
+  <div class="topRight">
+    <h1>Brooke Hurford</h1>
+    <h1>Front End Developer</h1>
+  </div>
+  <div class="bottomLeft">
+    <h1 class="navWhite">Portfolio</h1>
+  </div>
+  <div class="bottomRight">
+    <h1 class="navBlack">Contact</h1>
+  </div>
+</div>
 
-{{#each model as |project|}}
-{{#link-to 'project' project.id}}<div class="indexTile">
-  {{project-tile project=project}}
-</div>{{/link-to}}
-{{/each}}
-
-
-
-<!-- =========  Full screen video code, doesn't autoplay ========= -->
-
-<!-- <div class="fullscreen-bg">
-<video loop muted autoplay poster="img/background-video.mp4" class="fullscreen-bg__video">
-<source src="img/background-video.mp4" type="video/mp4">
-</video>
+<!-- <div class="homeHeader">
+  <img id="logo" src="img/logo.png" alt="Logo">
+  <div class="headerContent">
+    <h1>Brooke Hurford</h1>
+    <h1>Front End Developer</h1>
+  </div>
 </div> -->
+<div class="portfolioList">
+  {{#each model as |project|}}
+  {{#link-to 'project' project.id}}<div class="indexTile">
+    {{project-tile project=project}}
+  </div>{{/link-to}}
+  {{/each}}
+</div>
