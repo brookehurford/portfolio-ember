@@ -28,15 +28,27 @@
   .bottomLeft {
     @include grid($secondary);
     @include flex($justify: center, $align-items: center);
+    @extend %uppercase;
+    transition: all 200ms linear;
     h1 {
-      @include text($color: $black);
+      @include text($color: $black, $letter-spacing: 2px);
+    }
+    &:hover {
+      transition: all 200ms linear;
+      font-size: 40px;
     }
   }
   .bottomRight {
     @include grid($black);
     @include flex($justify: center, $align-items: center);
+    @extend %uppercase;
+    transition: all 200ms linear;
     h1 {
-      @include text($color: $white);
+      @include text($color: $white, $letter-spacing: 2px);
+    }
+    &:hover {
+      transition: all 200ms linear;
+      font-size: 40px;
     }
   }
 }

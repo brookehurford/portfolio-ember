@@ -22,3 +22,8 @@
   background-color: $color;
   @include size(50% 50%);
 }
+
+@mixin mainNav($color) {
+  font-size: 34px;
+  @include text($color: $color, $letter-spacing: 2px);
+}
