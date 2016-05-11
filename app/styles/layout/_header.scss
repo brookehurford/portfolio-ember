@@ -53,16 +53,6 @@
   }
 }
 
-.headerBar {
-  padding: 1% 0;
-  margin-bottom: 1%;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-}
-
 // .homeHeader {
 //   @include flex($justify: center, $align-items: center);
 //   height: 100vh;

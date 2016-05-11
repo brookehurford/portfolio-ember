@@ -1,11 +1,12 @@
-<h1>Portfolio Page</h1>
-<div class="portfolioList">
-  {{#each model as |project|}}
-  {{#link-to 'project' project.id}}<div class="indexTile">
-    {{project-tile project=project}}
-  </div>{{/link-to}}
-  {{/each}}
+<div class="portfolioWrapper">
+  <nav>
+    <img class="logo" src="img/logo-white.png">
+  </nav>
+    <div class="portfolioList">
+      {{#each model as |project|}}
+      {{#link-to 'project' project.id}}<div class="projectTile">
+        {{project-tile project=project}}
+      </div>{{/link-to}}
+      {{/each}}
+    </div>
 </div>
-
-
-{{log model}}
