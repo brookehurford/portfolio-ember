@@ -1,10 +1,13 @@
-.indexTile {
-  border: 1px solid lightgrey;
-  padding: 2% 5%;
-  margin-bottom: 3%;
-  transition: all 300ms linear;
-  &:hover {
+.projectTile {
+  .ember-view {
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 2% 5%;
+    margin-bottom: 3%;
     transition: all 300ms linear;
-    background-color: mintcream;
+    &:hover {
+      transition: all 300ms linear;
+      background-color: mintcream;
+    }
   }
 }

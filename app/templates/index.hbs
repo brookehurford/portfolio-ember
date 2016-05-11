@@ -5,7 +5,7 @@
     <h1>Front End Developer</h1>
   </div>
   <div class="bottomLeft">
-    <h1 class="navWhite">Portfolio</h1>
+    {{#link-to 'portfolio'}}<h1 class="navWhite">Portfolio</h1>{{/link-to}}
   </div>
   <div class="bottomRight">
     <h1 class="navBlack">Contact</h1>
@@ -19,10 +19,10 @@
     <h1>Front End Developer</h1>
   </div>
 </div> -->
-<div class="portfolioList">
+<!-- <div class="portfolioList">
   {{#each model as |project|}}
   {{#link-to 'project' project.id}}<div class="indexTile">
     {{project-tile project=project}}
   </div>{{/link-to}}
   {{/each}}
-</div>
+</div> -->
